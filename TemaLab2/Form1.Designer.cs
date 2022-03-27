@@ -54,12 +54,15 @@
             // 
             // login
             // 
-            this.login.Location = new System.Drawing.Point(114, 74);
+            this.login.BackColor = System.Drawing.Color.DimGray;
+            this.login.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.login.ForeColor = System.Drawing.Color.White;
+            this.login.Location = new System.Drawing.Point(114, 68);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(75, 23);
+            this.login.Size = new System.Drawing.Size(75, 31);
             this.login.TabIndex = 3;
             this.login.Text = "Log in";
-            this.login.UseVisualStyleBackColor = true;
+            this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // feedback
@@ -75,12 +78,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(304, 191);
             this.Controls.Add(this.feedback);
             this.Controls.Add(this.login);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

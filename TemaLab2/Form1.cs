@@ -9,7 +9,7 @@ namespace TemaLab2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            MaximizeBox = false;
         }
 
         private void login_Click(object sender, EventArgs e)
