@@ -9,10 +9,10 @@ namespace TemaLab2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MaximizeBox = false;
+            
         }
 
-        private void login_Click(object sender, EventArgs e)
+        private void signin_Click(object sender, EventArgs e)
         {
             StreamReader reader = new StreamReader("login.txt");
             String line, user = "", pass = "";
@@ -34,7 +34,8 @@ namespace TemaLab2
                         Form2 form2 = new Form2();
                         form2.Show();
                         this.Hide();
-                    } else
+                    }
+                    else
                     {
                         userExists = true;
                     }
@@ -43,10 +44,19 @@ namespace TemaLab2
             if (userExists)
             {
                 feedback.Text = "Wrong password";
-            } else
+            }
+            else
             {
                 feedback.Text = "User not found";
             }
+            reader.Close();
+        }
+
+        private void register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
         }
     }
 }

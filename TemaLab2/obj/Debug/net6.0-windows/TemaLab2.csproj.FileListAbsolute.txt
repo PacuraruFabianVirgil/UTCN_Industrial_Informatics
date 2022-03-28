@@ -35,3 +35,4 @@ C:\Users\pacur\Source\Repos\UTCNindustrialinformatics\TemaLab2\obj\Debug\net6.0-
 C:\Users\pacur\Source\Repos\UTCNindustrialinformatics\TemaLab2\obj\Debug\net6.0-windows\TemaLab2.genruntimeconfig.cache
 C:\Users\pacur\Source\Repos\UTCNindustrialinformatics\TemaLab2\obj\Debug\net6.0-windows\ref\TemaLab2.dll
 C:\Users\pacur\Source\Repos\UTCNindustrialinformatics\TemaLab2\obj\Debug\net6.0-windows\TemaLab2.Properties.Resources.resources
+C:\Users\pacur\source\repos\UTCNindustrialinformatics\TemaLab2\obj\Debug\net6.0-windows\TemaLab2.Form3.resources
