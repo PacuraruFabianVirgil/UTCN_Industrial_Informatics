@@ -30,7 +30,7 @@ namespace TemaLab2
             if (currentDay.Year - dayOfBirth.Year > 18)
             {
                 pass = true;
-            } else if (currentDay.Year == dayOfBirth.Year)
+            } else if (currentDay.Year - dayOfBirth.Year == 18)
             {
                 if (currentDay.Month > dayOfBirth.Month)
                 {
@@ -43,7 +43,8 @@ namespace TemaLab2
                     }
                 }
             }
-            if((password.Text == checkPassword.Text) && (pass))
+            if((password.Text == checkPassword.Text) && (password.Text != "") && 
+                (username.Text != "") && pass)
             {
                 StreamWriter writer = new StreamWriter("login.txt", true);
                 writer.WriteLine();
@@ -54,6 +55,18 @@ namespace TemaLab2
                 this.Hide();
             } else
             {
+                if(username.Text == "")
+                {
+                    username.PlaceholderText = "don't leave empty";
+                }
+                if(password.Text == "")
+                {
+                    password.PlaceholderText = "don't leave empty";
+                }
+                if(checkPassword.Text == "")
+                {
+                    checkPassword.PlaceholderText = "don't leave empty";
+                }
                 if(password.Text != checkPassword.Text)
                 {
                     wrongPassword.Text = "The passwords do not match";
