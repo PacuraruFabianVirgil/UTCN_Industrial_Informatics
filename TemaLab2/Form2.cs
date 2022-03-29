@@ -12,8 +12,12 @@ namespace TemaLab2
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        String user;
+        String fileName;
+        String fileExtension;
+        public Form2(String user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
@@ -29,6 +33,19 @@ namespace TemaLab2
             if (opnfd.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = new Bitmap(opnfd.FileName);
+                String path = opnfd.FileName;
+                for(int i = path.Length-1; i >= 0; i--)
+                {
+                    if(path[i] == '.')
+                    {
+                        fileExtension = path.Substring(i);
+                    }
+                    if(path[i] == '\\')
+                    {
+                        fileName = path.Substring(i+1);
+                        break;
+                    }
+                }
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
@@ -50,12 +67,19 @@ namespace TemaLab2
 
         private void store_Click(object sender, EventArgs e)
         {
+            String folder;
+            if (see.Checked)
+            {
+                folder = user + "/";
+            }
+            else folder = "general/";
             if(pictureBox1.Image == pictureBox1.InitialImage)
             {
                 succes.ForeColor = Color.Red;
                 succes.Text = "Choose a picture";
             } else if(newName.Visible == false)
             {
+                pictureBox1.Image.Save(folder + fileName, System.Drawing.Imaging.ImageFormat.Jpeg);
                 succes.ForeColor = Color.Green;
                 succes.Text = "Picture Stored";
             } else if (newName.Text == "")
@@ -65,6 +89,7 @@ namespace TemaLab2
                 succes.Text = "Picture Not Stored";
             } else
             {
+                pictureBox1.Image.Save(folder + newName.Text + fileExtension, System.Drawing.Imaging.ImageFormat.Jpeg);
                 succes.ForeColor = Color.Green;
                 succes.Text = "Picture Stored";
             }     

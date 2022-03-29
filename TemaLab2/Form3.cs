@@ -64,11 +64,12 @@ namespace TemaLab2
             if ((password.Text == checkPassword.Text) && (password.Text != "") && 
                 (username.Text != "") && agePass && (!userExists))
             {
+                Directory.CreateDirectory(username.Text);
                 StreamWriter writer = new StreamWriter("login.txt", true);
                 writer.WriteLine();
                 writer.Write(username.Text+" "+password.Text);
                 writer.Close();
-                Form2 form2 = new Form2();
+                Form2 form2 = new Form2(username.Text);
                 form2.Show();
                 this.Hide();
             } else

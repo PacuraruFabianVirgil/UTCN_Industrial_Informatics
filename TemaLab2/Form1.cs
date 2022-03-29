@@ -31,7 +31,7 @@ namespace TemaLab2
                 {
                     if (pass == password.Text)
                     {
-                        Form2 form2 = new Form2();
+                        Form2 form2 = new Form2(username.Text);
                         form2.Show();
                         this.Hide();
                     }
