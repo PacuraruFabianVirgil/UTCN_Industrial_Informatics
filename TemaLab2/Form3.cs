@@ -26,25 +26,43 @@ namespace TemaLab2
         {
             DateTime dayOfBirth = date.Value;
             DateTime currentDay = DateTime.Now;
-            Boolean pass = false;
+            Boolean agePass = false;
             if (currentDay.Year - dayOfBirth.Year > 18)
             {
-                pass = true;
+                agePass = true;
             } else if (currentDay.Year - dayOfBirth.Year == 18)
             {
                 if (currentDay.Month > dayOfBirth.Month)
                 {
-                    pass = true;
+                    agePass = true;
                 } else if (currentDay.Month == dayOfBirth.Month)
                 {
                     if (currentDay.Day >= dayOfBirth.Day)
                     {
-                        pass = true;
+                        agePass = true;
                     }
                 }
             }
-            if((password.Text == checkPassword.Text) && (password.Text != "") && 
-                (username.Text != "") && pass)
+            StreamReader reader = new StreamReader("login.txt");
+            String line, user = "", pass = "";
+            Boolean userExists = false;
+            while ((line = reader.ReadLine()) != null)
+            {
+                for (int i = 0; i < line.Length; i++)
+                {
+                    if (line[i] == ' ')
+                    {
+                        user = line.Substring(0, i);
+                    }
+                }
+                if (user == username.Text)
+                {
+                    userExists = true;
+                }
+            }
+            reader.Close();
+            if ((password.Text == checkPassword.Text) && (password.Text != "") && 
+                (username.Text != "") && agePass && (!userExists))
             {
                 StreamWriter writer = new StreamWriter("login.txt", true);
                 writer.WriteLine();
@@ -67,11 +85,14 @@ namespace TemaLab2
                 {
                     checkPassword.PlaceholderText = "don't leave empty";
                 }
-                if(password.Text != checkPassword.Text)
+                if(userExists)
+                {
+                    wrongPassword.Text = "The user already exists";
+                } else if (password.Text != checkPassword.Text)
                 {
                     wrongPassword.Text = "The passwords do not match";
                 } else wrongPassword.Text = "";
-                if (!pass)
+                if (!agePass)
                 {
                     age.Text = "You're not old enough";
                 } else age.Text = "";
