@@ -17,6 +17,7 @@ namespace TemaLab2
             StreamReader reader = new StreamReader("login.txt");
             String line, user = "", pass = "";
             Boolean userExists = false;
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             while ((line = reader.ReadLine()) != null)
             {
                 for (int i = 0; i < line.Length; i++)
@@ -41,6 +42,7 @@ namespace TemaLab2
                     }
                 }
             }
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             if (userExists)
             {
                 feedback.Text = "Wrong password";

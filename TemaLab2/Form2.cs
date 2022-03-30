@@ -94,5 +94,42 @@ namespace TemaLab2
                 succes.Text = "Picture Stored";
             }     
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            string[] generalFilePaths = Directory.GetFiles("general");
+            string[] privateFilePaths = Directory.GetFiles(user);
+            string[] path;
+            for(int i = 0; i < generalFilePaths.Length; i++)
+            {
+                for (int j = privateFilePaths[i].Length - 1; j >= 0; j--)
+                {
+                    if (path[i] == '.')
+                    {
+                        fileExtension = path.Substring(i);
+                    }
+                    if (path[i] == '\\')
+                    {
+                        fileName = path.Substring(i + 1);
+                        break;
+                    }
+                }
+            }
+            for(int i = 0; i < privateFilePaths.Length; i++)
+            {
+                for (int j = privateFilePaths[i].Length-1; j >= 0; j--)
+                {
+                    if (path[i] == '.')
+                    {
+                        fileExtension = path.Substring(i);
+                    }
+                    if (path[i] == '\\')
+                    {
+                        fileName = path.Substring(i + 1);
+                        break;
+                    }
+                }
+            }
+        }
     }
 }

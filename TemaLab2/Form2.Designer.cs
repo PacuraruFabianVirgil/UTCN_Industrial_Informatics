@@ -43,9 +43,13 @@
             this.add = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictures = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -56,7 +60,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(526, 397);
+            this.tabControl1.Size = new System.Drawing.Size(526, 390);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -76,7 +80,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(518, 369);
+            this.tabPage1.Size = new System.Drawing.Size(518, 362);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add image";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -191,25 +195,45 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(150, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(360, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(362, 350);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pictureBox2);
+            this.tabPage2.Controls.Add(this.pictures);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(518, 369);
+            this.tabPage2.Size = new System.Drawing.Size(518, 362);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "See images";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(134, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(376, 349);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictures
+            // 
+            this.pictures.FormattingEnabled = true;
+            this.pictures.ItemHeight = 15;
+            this.pictures.Location = new System.Drawing.Point(8, 6);
+            this.pictures.Name = "pictures";
+            this.pictures.Size = new System.Drawing.Size(120, 349);
+            this.pictures.TabIndex = 0;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 397);
+            this.ClientSize = new System.Drawing.Size(526, 390);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "Form2";
@@ -219,6 +243,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +266,7 @@
         private Label label4;
         private Label label3;
         private Button store;
+        private PictureBox pictureBox2;
+        private ListBox pictures;
     }
 }

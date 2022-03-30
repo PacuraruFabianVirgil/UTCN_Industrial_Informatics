@@ -44,8 +44,9 @@ namespace TemaLab2
                 }
             }
             StreamReader reader = new StreamReader("login.txt");
-            String line, user = "", pass = "";
+            String line, user = "";
             Boolean userExists = false;
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             while ((line = reader.ReadLine()) != null)
             {
                 for (int i = 0; i < line.Length; i++)
@@ -60,6 +61,7 @@ namespace TemaLab2
                     userExists = true;
                 }
             }
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             reader.Close();
             if ((password.Text == checkPassword.Text) && (password.Text != "") && 
                 (username.Text != "") && agePass && (!userExists))
