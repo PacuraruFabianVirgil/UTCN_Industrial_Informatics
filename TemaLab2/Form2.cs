@@ -15,6 +15,7 @@ namespace TemaLab2
         String user;
         String fileName;
         String fileExtension;
+        String[] imagePaths;
         public Form2(String user)
         {
             this.user = user;
@@ -95,41 +96,52 @@ namespace TemaLab2
             }     
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void tabControl1_SelectedIndexChanged(Object sender, EventArgs e)
         {
+            pictures.Items.Clear();
             string[] generalFilePaths = Directory.GetFiles("general");
             string[] privateFilePaths = Directory.GetFiles(user);
-            string[] path;
-            for(int i = 0; i < generalFilePaths.Length; i++)
+            imagePaths = new string[generalFilePaths.Length + privateFilePaths.Length];
+            for (int i = 0; i < privateFilePaths.Length; i++)
             {
+                int end = 0;
                 for (int j = privateFilePaths[i].Length - 1; j >= 0; j--)
                 {
-                    if (path[i] == '.')
+                    if (privateFilePaths[i][j] == '.')
                     {
-                        fileExtension = path.Substring(i);
+                        end = j;
                     }
-                    if (path[i] == '\\')
+                    if (privateFilePaths[i][j] == '\\')
                     {
-                        fileName = path.Substring(i + 1);
+                        pictures.Items.Add(privateFilePaths[i].Substring(j + 1, Math.Min(end - j - 1, 18)));
+                        imagePaths[i] = user + "/" + privateFilePaths[i].Substring(j + 1);
                         break;
                     }
                 }
             }
-            for(int i = 0; i < privateFilePaths.Length; i++)
+            for (int i = 0; i < generalFilePaths.Length; i++)
             {
-                for (int j = privateFilePaths[i].Length-1; j >= 0; j--)
+                int end = 0;
+                for (int j = generalFilePaths[i].Length - 1; j >= 0; j--)
                 {
-                    if (path[i] == '.')
+                    if (generalFilePaths[i][j] == '.')
                     {
-                        fileExtension = path.Substring(i);
+                        end = j;
                     }
-                    if (path[i] == '\\')
+                    if (generalFilePaths[i][j] == '\\')
                     {
-                        fileName = path.Substring(i + 1);
+                        pictures.Items.Add(generalFilePaths[i].Substring(j + 1, Math.Min(end - j - 1, 18)));
+                        imagePaths[privateFilePaths.Length + i] = "general/" + generalFilePaths[i].Substring(j + 1);
                         break;
                     }
                 }
             }
+        }
+
+        private void pictures_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pictureBox2.ImageLocation = imagePaths[pictures.SelectedIndex];
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
         }
     }
 }

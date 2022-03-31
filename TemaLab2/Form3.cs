@@ -99,8 +99,7 @@ namespace TemaLab2
                 {
                     age.Text = "You're not old enough";
                 } else age.Text = "";
-            }
-            
+            }  
         }
     }
 }

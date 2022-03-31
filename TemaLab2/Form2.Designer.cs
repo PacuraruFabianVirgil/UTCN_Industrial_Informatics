@@ -59,7 +59,7 @@
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Size = new System.Drawing.Size(526, 390);
             this.tabControl1.TabIndex = 0;
             // 
@@ -210,7 +210,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "See images";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // pictureBox2
             // 
@@ -228,6 +227,7 @@
             this.pictures.Name = "pictures";
             this.pictures.Size = new System.Drawing.Size(120, 349);
             this.pictures.TabIndex = 0;
+            this.pictures.SelectedIndexChanged += new System.EventHandler(this.pictures_SelectedIndexChanged);
             // 
             // Form2
             // 
