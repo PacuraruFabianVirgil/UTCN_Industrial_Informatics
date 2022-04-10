@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="II_Lab3_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Facultati">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <Property Name="NumeFac" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Universitati" Relationship="Self.FK_Facultati_Universitati" FromRole="Facultati" ToRole="Universitati" />
+  </EntityType>
+  <EntityType Name="Universitati">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="NameUniv" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Code" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Facultatis" Relationship="Self.FK_Facultati_Universitati" FromRole="Universitati" ToRole="Facultati" />
+  </EntityType>
+  <Association Name="FK_Facultati_Universitati">
+    <End Role="Universitati" Type="Self.Universitati" Multiplicity="1" />
+    <End Role="Facultati" Type="Self.Facultati" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Universitati">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="Facultati">
+        <PropertyRef Name="Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="II_Lab3_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Facultatis" EntityType="Self.Facultati" />
+    <EntitySet Name="Universitatis" EntityType="Self.Universitati" />
+    <AssociationSet Name="FK_Facultati_Universitati" Association="Self.FK_Facultati_Universitati">
+      <End Role="Universitati" EntitySet="Universitatis" />
+      <End Role="Facultati" EntitySet="Facultatis" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

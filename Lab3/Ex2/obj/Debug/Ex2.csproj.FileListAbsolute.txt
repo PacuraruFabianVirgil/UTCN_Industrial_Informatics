@@ -1,0 +1,16 @@
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\Ex2.exe.config
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\Ex2.exe
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\Ex2.pdb
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\EntityFramework.dll
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\EntityFramework.xml
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.csproj.AssemblyReference.cache
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.csproj.SuggestedBindingRedirects.cache
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.Form1.resources
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.Properties.Resources.resources
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.csproj.GenerateResource.cache
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.csproj.CoreCompileInputs.cache
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.csproj.CopyComplete
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.exe
+C:\Users\pacur\source\repos\PacuraruFabianVirgil\UTCNindustrialinformatics\Lab3\Ex2\obj\Debug\Ex2.pdb
