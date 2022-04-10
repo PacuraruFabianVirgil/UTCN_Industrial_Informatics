@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="II_Lab3_DBModelStoreContainer" CdmEntityContainer="II_Lab3_DBEntities">
+    <EntitySetMapping Name="Facultatis">
+      <EntityTypeMapping TypeName="II_Lab3_DBModel.Facultati">
+        <MappingFragment StoreEntitySet="Facultati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="NumeFac" ColumnName="NumeFac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Universitatis">
+      <EntityTypeMapping TypeName="II_Lab3_DBModel.Universitati">
+        <MappingFragment StoreEntitySet="Universitati">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NameUniv" ColumnName="NameUniv" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
