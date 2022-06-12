@@ -1,0 +1,11 @@
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\bin\Debug\client.exe.config
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\bin\Debug\client.exe
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\bin\Debug\client.pdb
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.csproj.AssemblyReference.cache
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.csproj.SuggestedBindingRedirects.cache
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.Form1.resources
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.Properties.Resources.resources
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.csproj.GenerateResource.cache
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.csproj.CoreCompileInputs.cache
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.exe
+C:\Users\pacur\OneDrive\Desktop\II_temaL2\client\client\obj\Debug\client.pdb
